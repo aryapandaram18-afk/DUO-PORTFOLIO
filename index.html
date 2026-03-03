@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arya & Nanmathi · web + ui/ux</title>
+  <!-- Fonts: Inter + Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (kept only for a few minimal icons, but no emojis) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Twovate</div>
+  <nav>
+    <ul>
+      <li><a href="#" class="active" id="nav-home">Home</a></li>
+      <li><a href="#about" id="nav-about">About</a></li>
+      <li><a href="#projects" id="nav-projects">Projects</a></li>
+      <li><a href="#skills" id="nav-skills">Skills</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-- HERO with animated DEVELOPER & DESIGNER -->
+<section class="hero">
+  <div class="animated-bg">
+    <span class="bg-word developer-word">DEVELOPER</span>
+    <span class="bg-word designer-word">DESIGNER</span>
+  </div>
+  <div class="hero-left">
+    <h1>we are arya & nanmathi</h1>
+    
+    <!-- typing animation -->
+    <div class="type-container">
+      <span class="static-text">we specialize in</span>
+      <span class="dynamic-text" id="typingText">UI/UX design</span>
+      <span class="cursor"></span>
+    </div>
+    
+    <p>Combining strategic thinking with visual storytelling,
+we design interfaces that are intuitive, elegant, and impactful.</p>
+    <button class="project-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">see our world →</button>
+  </div>
+  <div class="hero-right">
+    <div class="single-circle">
+      <div class="circle" id="mainCircle">
+        <img id="circleImg" src="images/black.jpg" alt="black-duo">
+      </div>
+      <div class="duo-names">
+        <span id="nameA" class="active-name"> Arya</span> / <span id="nameB" class="inactive-name">Nanmathi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="about-card">
+    <div class="about-header"><h2>About the Duo</h2></div>
+    <p style="font-size:1.3rem;">We don't follow templates, we craft experiences. We're a duo same passion, same skills, building web experiences that connect with the physical world.</p>
+    <div class="feature-grid">
+      <div class="feature-item"><h4>10+</h4><p>wireframes & prototypes</p></div>
+      <div class="feature-item"><h4>2+</h4><p>end‑to‑end case studies</p></div>
+      <div class="feature-item"><h4>6+</h4><p>poster & magazine layouts</p></div>
+      <div class="feature-item"><h4>3+</h4><p>PPT Decks</p></div>
+    </div>
+    <div class="about-footer">
+      <div class="quote">“we don't just design interfaces, we design how people experience the digital world”</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (3-card system) -->
+<section id="projects" class="projects-section">
+  <h2>✦ project index ✦</h2>
+  <div class="project-categories">
+    <div class="category-card" id="catCase"><i class="fas fa-book-open"></i><h3>case studies</h3><p>in‑depth research</p></div>
+    <div class="category-card" id="catWeb"><i class="fas fa-pager"></i><h3>web ui/ux</h3><p>figma prototypes</p></div>
+    <div class="category-card" id="catPpt"><i class="fas fa-file-powerpoint"></i><h3>ppt decks</h3><p>slide presentations</p></div>
+  </div>
+  <div class="project-panel" id="projectPanel">
+    <div class="panel-header"><h4 id="panelTitle">case studies</h4><span style="color:var(--soft-cyan);">click card to explore</span></div>
+    <div class="panel-content" id="panelContent"></div>
+  </div>
+</section>
+
+<!-- SKILLS MARQUEE (top left->right, bottom right->left) -->
+<section id="skills" class="skills-section">
+  <div class="skills-title">
+    <h2>Skills & Technologies</h2>
+    <p>The tools and technologies we're really good at</p>
+  </div>
+
+  <!-- Top marquee: left to right -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <!-- first set -->
+      <div class="skill-item"><i class="fab fa-js"></i><div class="skill-label">JS <span class="small">JavaScript</span></div></div>
+      <div class="skill-item"><i class="fab fa-js"></i><div class="skill-label">TS <span class="small">TypeScript</span></div></div>
+      <div class="skill-item"><i class="fab fa-react"></i><div class="skill-label">React</div></div>
+      <div class="skill-item"><i class="fab fa-react"></i><div class="skill-label">Next.js</div></div>
+      <div class="skill-item"><i class="fab fa-node"></i><div class="skill-label">Node.js</div></div>
+      <div class="skill-item"><i class="fas fa-server"></i><div class="skill-label">Express.js</div></div>
+      <div class="skill-item"><i class="fas fa-cubes"></i><div class="skill-label">Nest.js</div></div>
+      <div class="skill-item"><i class="fas fa-plug"></i><div class="skill-label">Socket.io</div></div>
+      <!-- duplicate for seamless loop -->
+      <div class="skill-item"><i class="fab fa-js"></i><div class="skill-label">JS <span class="small">JavaScript</span></div></div>
+      <div class="skill-item"><i class="fab fa-js"></i><div class="skill-label">TS <span class="small">TypeScript</span></div></div>
+      <div class="skill-item"><i class="fab fa-react"></i><div class="skill-label">React</div></div>
+      <div class="skill-item"><i class="fab fa-react"></i><div class="skill-label">Next.js</div></div>
+      <div class="skill-item"><i class="fab fa-node"></i><div class="skill-label">Node.js</div></div>
+      <div class="skill-item"><i class="fas fa-server"></i><div class="skill-label">Express.js</div></div>
+      <div class="skill-item"><i class="fas fa-cubes"></i><div class="skill-label">Nest.js</div></div>
+      <div class="skill-item"><i class="fas fa-plug"></i><div class="skill-label">Socket.io</div></div>
+    </div>
+  </div>
+
+  <!-- Bottom marquee: right to left -->
+  <div class="marquee">
+    <div class="marquee-track right-left">
+      <!-- first set -->
+      <div class="skill-item"><i class="fas fa-database"></i><div class="skill-label">PostgreSQL</div></div>
+      <div class="skill-item"><i class="fas fa-database"></i><div class="skill-label">MongoDB</div></div>
+      <div class="skill-item"><i class="fab fa-sass"></i><div class="skill-label">Sass/Scss</div></div>
+      <div class="skill-item"><i class="fab fa-tailwindcss"></i><div class="skill-label">Tailwindcss</div></div>
+      <div class="skill-item"><i class="fab fa-figma"></i><div class="skill-label">Figma</div></div>
+      <div class="skill-item"><i class="fas fa-check-circle"></i><div class="skill-label">Cypress</div></div>
+      <div class="skill-item"><i class="fas fa-book"></i><div class="skill-label">Storybook</div></div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i><div class="skill-label">Git</div></div>
+      <!-- duplicate -->
+      <div class="skill-item"><i class="fas fa-database"></i><div class="skill-label">PostgreSQL</div></div>
+      <div class="skill-item"><i class="fas fa-database"></i><div class="skill-label">MongoDB</div></div>
+      <div class="skill-item"><i class="fab fa-sass"></i><div class="skill-label">Sass/Scss</div></div>
+      <div class="skill-item"><i class="fab fa-tailwindcss"></i><div class="skill-label">Tailwindcss</div></div>
+      <div class="skill-item"><i class="fab fa-figma"></i><div class="skill-label">Figma</div></div>
+      <div class="skill-item"><i class="fas fa-check-circle"></i><div class="skill-label">Cypress</div></div>
+      <div class="skill-item"><i class="fas fa-book"></i><div class="skill-label">Storybook</div></div>
+      <div class="skill-item"><i class="fab fa-git-alt"></i><div class="skill-label">Git</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>©  arya & nanmathi · design duo</div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/arya_pandaram/" target="_blank">instagram</a>
+    <a href="https://www.behance.net/arya_pandaram" target="_blank">behance</a>
+    <a href="https://github.com/aryapandaram18-afk" target="_blank">github</a>
+    <a href="mailto:arya.pandaram18@gmail.com" target="_blank">mail</a>
+  </div>
+</footer>
+</body>
+</html>
